@@ -1,23 +1,31 @@
 const { Router } = require("express");
 
-const indexRouter = Router();
+const router = Router();
 
 const messages = [
     {
-        text: "Hi there!",
-        user: "Vadym",
+        text: "Hello World!",
+        user: "KVG24",
         added: new Date(),
     },
     {
-        text: "Hello World!",
-        user: "Vadym",
+        text: "Wow, I can't believe I made a working full stack app myself. How far have I come in this learning journey. This is very exciting and fun",
+        user: "KVG24",
         added: new Date(),
     },
 ];
 
-indexRouter.get("/", (req, res) => {
+router.get("/", (req, res) => {
     res.render("index", { messages: messages });
 });
-indexRouter.get("/new", (req, res) => res.render("form"));
+router.get("/new", (req, res) => res.render("form"));
+router.post("/new", (req, res) => {
+    messages.push({
+        text: req.body.text,
+        user: req.body.name,
+        added: new Date(),
+    });
+    res.redirect("/");
+});
 
-module.exports = indexRouter;
+module.exports = router;

@@ -3,6 +3,9 @@ const app = express();
 const indexRouter = require("./routes/indexRouter");
 const path = require("node:path");
 
+// Parse form data
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/", indexRouter);
 
 // EJS handling
