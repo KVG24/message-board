@@ -8,12 +8,16 @@
     </head>
     <body>
         <h1>New Message Form</h1>
-        <a href="/">Home</a>
+        <a href="/">Cancel</a>
         <form method="POST" action="/new">
-            <label for="name">Your name:</label>
-            <input name="name" type="text" />
-            <label for="text">Message:</label>
-            <input name="text" type="text" />
+            <input id="name" name="name" type="text" placeholder="Your name" />
+            <textarea
+                name="text"
+                rows="4"
+                cols="40"
+                style="resize: vertical; overflow-wrap: break-word"
+                placeholder="Your message"
+            ></textarea>
             <button type="submit">Submit</button>
         </form>
     </body>

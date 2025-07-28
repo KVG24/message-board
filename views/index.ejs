@@ -11,9 +11,9 @@
         <a href="/new">Add message</a>
         <% messages.forEach((message) => { %>
         <div>
-            <h3><%= message.user %></h3>
-            <p><%= message.text %></p>
-            <p><%= formatDate(message.added) %></p>
+            <h3 class="name"><%= message.user %></h3>
+            <p class="text"><%= message.text %></p>
+            <p class="date"><%= formatDate(message.added) %></p>
         </div>
         <% }) %>
     </body>
