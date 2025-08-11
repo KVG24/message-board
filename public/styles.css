@@ -51,8 +51,12 @@ div {
     padding: 1rem;
     border: 2px solid white;
     border-radius: 10px;
-    min-width: 300px;
-    margin: 1rem;
+    width: min(90% - 2rem, 500px);
+    margin: 1rem auto;
+}
+
+p {
+    overflow-wrap: break-word;
 }
 
 .name {
