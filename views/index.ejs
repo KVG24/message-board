@@ -9,11 +9,11 @@
     <body>
         <h1>Message Board</h1>
         <a href="/new">Add message</a>
-        <% messages.forEach((message) => { %>
+        <% messages.forEach((item) => { %>
         <div>
-            <h3 class="name"><%= message.user %></h3>
-            <p class="text"><%= message.text %></p>
-            <p class="date"><%= formatDate(message.added) %></p>
+            <h3 class="name"><%= item.username %></h3>
+            <p class="text"><%= item.message %></p>
+            <p class="date"><%= formatDate(item.added) %></p>
         </div>
         <% }) %>
     </body>

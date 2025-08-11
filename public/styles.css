@@ -24,18 +24,27 @@ h1 {
     text-align: center;
 }
 
-a {
+a,
+button {
     padding: 1rem;
     background-color: rgb(194, 194, 194);
     color: rgb(31, 31, 31);
     text-decoration: none;
     border: 1px solid white;
     border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 900;
 }
 
-a:hover {
+a:hover,
+button:hover {
     background-color: rgb(126, 126, 126);
     color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+
+button {
+    background-color: rgb(139, 154, 182);
 }
 
 div {
@@ -66,9 +75,16 @@ form {
 }
 
 #name {
-    width: 150px;
+    width: 200px;
+    border-radius: 10px;
+    height: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 #text {
     width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 1rem;
 }
